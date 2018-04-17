@@ -42,25 +42,17 @@ describe 'Testing demoqa registration page with selenium' do
 		end
 
 		it 'should accept a marital status selection of Single, Married, or Divorced' do
-      		# status = ['Single', 'Married', 'Divorced']
-      		# status.each do |i|
-      		# 	expect(@driver.select_marital_option(i)).to be_truthy
-      		# end
-      		# @driver.select_marital_option('Single')
-      		# @driver.select_marital_option('Married')
-      		# @driver.select_marital_option('Divorced')
-      		@driver.select_marital_option(@rand_marital_status)
+      		@driver.select_marital_option('Single')
+      		@driver.select_marital_option('Married')
+      		@driver.select_marital_option('Divorced')
+      		# @driver.select_marital_option(@rand_marital_status)
 	    end
 
 	    it 'should accept a hobby status selection of Dance, Reading, or Cricket' do
-	      	# status = ['Dance', 'Reading', 'Cricket']
-      		# status.each do |i|
-      		# 	expect(@driver.select_hobby_option(i)).to be_truthy
-      		# end
-      		# @driver.select_hobby_option('Dance')
-      		# @driver.select_hobby_option('Reading')
-      		# @driver.select_hobby_option('Cricket')
-      		@driver.select_hobby_option(@rand_hobby)
+      		@driver.select_hobby_option('Dance')
+      		@driver.select_hobby_option('Reading')
+      		@driver.select_hobby_option('Cricket')
+      		# @driver.select_hobby_option(@rand_hobby)
 	    end
 
 	    it 'should have a country default of Afhghanistan' do

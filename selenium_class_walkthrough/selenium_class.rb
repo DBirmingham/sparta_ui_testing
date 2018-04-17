@@ -19,7 +19,6 @@ class SeleniumQaToolsForm
 	CONTINENT_DROPDOWN_ID = 'continents'
 	SELENIUM_COMMANDS_SELECTION_ID = 'selenium_commands'
 
-
 	def initialize
 		@chrome_driver = Selenium::WebDriver.for :chrome
 	end
@@ -38,20 +37,10 @@ class SeleniumQaToolsForm
 
 	def input_firstname_field(text)
 		@chrome_driver.find_element(:name, FIRST_NAME_FIELD_NAME).send_keys(text)
-		sleep 4
-	end
-
-	def get_first_name_text
-		puts @chrome_driver.find_element(:name, FIRST_NAME_FIELD_NAME)['value']
 	end
 
 	def input_lastname_field(text)
 		@chrome_driver.find_element(:name, LAST_NAME_FIELD_NAME).send_keys(text)
-		sleep 4
-	end
-
-	def get_last_name_text
-		puts @chrome_driver.find_element(:name, LAST_NAME_FIELD_NAME)['value']
 	end
 
 	def select_male_sex
@@ -64,17 +53,15 @@ class SeleniumQaToolsForm
 
 	def select_radio year
 		years = @chrome_driver.find_elements(:name, EXPERIENCE_RADIO_NAME)
+		
 		years.each do |y|
 			y.click if y["value"] == year
 		end
 	end
 
-	def input_date(text)
-		@chrome_driver.find_element(:id, DATE_FIELD_ID).send_keys(text)
-	end
-
 	def select_professions work
 		professions = @chrome_driver.find_elements(:name, PROFESSION_SELECTION_NAME)
+		
 		professions.each do |prof|
 			prof.click if work.include? prof["value"]
 		end
@@ -94,6 +81,7 @@ class SeleniumQaToolsForm
 
 	def select_tools tooling
 		tools = @chrome_driver.find_elements(:name, TOOL_SELECTION_NAME)
+		
 		tools.each do |t|
 			t.click if tooling.include? t["value"]
 		end
@@ -102,18 +90,23 @@ class SeleniumQaToolsForm
 	def select_continent continent
 		dropdown = @chrome_driver.find_element(:id, CONTINENT_DROPDOWN_ID)
 		options = dropdown.find_elements(:tag_name,"option")
+		
 		options.each do |option|
 			option.click if option.text == continent
 		end
-		sleep 2
 	end
 
 	def select_selenium_commands commands
 		list = @chrome_driver.find_element(:id, SELENIUM_COMMANDS_SELECTION_ID)
 		options = list.find_elements(:tag_name,"option")
+		
 		options.each do |option|
 			option.click if commands.include? option.text
 		end
+	end
+
+	def sleep num
+		sleep num
 	end
 end
 
@@ -137,3 +130,4 @@ form = SeleniumQaToolsForm.new
 # form.select_tools ["QTP", "Selenium IDE"]
 # form.select_continent "Australia"
 # form.select_selenium_commands ["Browser Commands", "Navigation Commands"]
+# form.sleep 10
