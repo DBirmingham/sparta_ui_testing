@@ -4,7 +4,7 @@ This repo includes some selenium examples and useful links which may help you co
 
 ## Getting Started
 
-Clone this repo to your personal computer and ensure you have the selenium webdriver gem installed.
+Clone this repo to your personal computer and ensure you have the selenium webdriver gem installed. In your terminal enter
 ```
 gem install selenium-webdriver
 ```
@@ -21,7 +21,7 @@ Necessary Gems
 
 ## Usage
 
-Simply run the ruby files like any other
+Simply run the ruby files like any other through your terminal
 ```
 ruby [filename]
 ```
@@ -35,4 +35,5 @@ rspec
 in the root folder of the relevant test object to run the tests located within this project
 
 ## Built With
+<<<<<<< HEAD
 Ruby, rspec, faker and Selenium-webdriver!
