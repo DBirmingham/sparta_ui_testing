@@ -35,5 +35,4 @@ rspec
 in the root folder of the relevant test object to run the tests located within this project
 
 ## Built With
-<<<<<<< HEAD
 Ruby, rspec, faker and Selenium-webdriver!
