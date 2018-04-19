@@ -15,7 +15,7 @@ If you wish to go into the capybara tests, ensure the capybara gem is installed.
 ```
 gem install capybara
 ```
-Capybara is a DSL that sits on top of Selenium in this case and works to give us a semantic, helpful and intuitive testing experience.
+Capybara is a DSL that sits on top of Selenium in this case and works to give us a semantic, helpful and intuitive testing experience. I've personally found that [this resource](http://www.rubydoc.info/github/jnicklas/capybara/Capybara) was quite helpful with getting to grips with Capybara's methods.
 
 
 ### Prerequisites
